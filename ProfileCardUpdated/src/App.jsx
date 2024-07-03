@@ -1,35 +1,81 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css'
+
+const skills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA"
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D"
+  },
+  {
+    skill: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF"
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33"
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "#60DAFB"
+  },
+  {
+    skill: "Svelte",
+    level: "beginner",
+    color: "#FF3B00"
+  }
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="container">
+      <Avatar />
+        <div className='data'>
+          <Intro />
+          <SkillList/>  
+        </div>
+    </div>
   )
 }
 
+const Avatar = ()=>{
+  return(
+  <img src='https://images.alphacoders.com/475/475526.jpg' alt="img" className="image"/>
+  )
+}
+const Intro = () => {
+  return(
+  <div>
+    <h1>Kunal Gupta</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam quasi nostrum deleniti eveniet libero at ad autem culpa in perspiciatis ab, omnis dolorem? Provident tempore perspiciatis animi, aliquid est quae dolorem commodi exercitationem unde dignissimos esse vero, ex suscipit tempora iste magnam eaque, necessitatibus illo nam! Facilis, numquam! Modi?</p>
+  </div>
+  )
+}
+
+const SkillList = () => {
+  return(
+    <div className='skill-list'>
+      {skills.map((skill)=><Skill color = {skill.color} skill = {skill.skill} level={skill.level}/>)}
+    </div>
+  )
+}
+
+const Skill = ({color , skill , level}) =>{
+  return(
+    <div className='skill' style={{backgroundColor : color}}>
+      <span>{skill}</span>
+      <span>{level === 'beginner' && "👶"}
+            {level === 'intermediate' && "💪"}
+            {level === 'advanced' && "💪"}
+      </span>
+    </div>
+  )
+}
 export default App
