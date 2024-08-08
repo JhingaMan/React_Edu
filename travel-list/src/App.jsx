@@ -31,6 +31,7 @@ function Form(){
 
   function handleSubmit(e){
     e.preventDefault()
+    console.log(e)
 
     if(!description) return;
 
@@ -64,6 +65,7 @@ function Form(){
         value = {description}
         onChange={(e)=> { 
           setdescription(e.target.value);
+          console.log(e)
           }}/>
       <button>ADD</button>
     </form>
