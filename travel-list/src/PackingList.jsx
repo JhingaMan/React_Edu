@@ -1,4 +1,5 @@
-import Item from "./Items";
+import Item from "./Items.jsx";
+import { useState } from "react";
 
 export default function PackingList({
   items,
