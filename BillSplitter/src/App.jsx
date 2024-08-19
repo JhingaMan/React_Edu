@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./index.css";
-import Form from "../../travel-list/src/Form";
 
 const initialFriends = [
   {
