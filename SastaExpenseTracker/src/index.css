@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.topbar{
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.summary{
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
+    margin:0px 20px 0px 20px;
+}
