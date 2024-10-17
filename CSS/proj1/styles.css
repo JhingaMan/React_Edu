@@ -1,0 +1,41 @@
+
+
+/* extremely basic formatting */
+body {
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 1.5;
+}
+/* make image flex with container */
+img {
+  max-width: 100%;
+}
+/* remove default margin/padding */
+figure {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border: 2px solid red;
+}
+
+figure:nth-child(3){
+    grid-column: 1/2;
+    grid-row: 1/span 3;
+    display: block;
+
+}
+
+figure:last-child{
+  grid-column: 1/ span 2;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    /* column-gap: 2rem;
+    row-gap: 1rem; */
+    gap : 2rem 1rem;
+    grid-template-rows: auto auto auto;
+}

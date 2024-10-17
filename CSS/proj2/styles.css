@@ -1,0 +1,53 @@
+/* extremely basic formatting */
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: black;
+}
+img {
+  max-width: 980px;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap : 1rem 2rem;
+    width: 980px;
+    margin: 0px auto ;
+}
+
+.grid-container img{
+  border: 2px solid red;
+  width: 100%;
+}
+
+.one{
+  /* grid-column: 1/3; */
+  grid-column: span 3;
+}
+
+.two{
+  /* grid-column: 1/2;
+  grid-row: 2/4; */
+  grid-column: 1;
+  grid-row: 2/span 2;
+}
+
+.three{
+  grid-column: 1/ span 2;
+}
+
+.four{
+  grid-column: 2; 
+  grid-row: 2;
+}
+
+.five{
+  grid-column: 2;
+  grid-row: 3;
+}
