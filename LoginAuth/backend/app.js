@@ -74,7 +74,7 @@ app.post("/login", (req, res) => {
               userId : user._id,
               userEmail : user.email,
             },
-            "RANDOM-TOKEN",
+            "RANDOM-TOKEN", 
             { expiresIn : "24h" },
           )
 
