@@ -1,0 +1,66 @@
+body {
+  background-color: #1e1e2f;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.title span {
+  color: #0080ff; /* Color for LEAP */
+}
+
+.leaderboard-table {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  border: 2px solid #e65c5c;
+  border-radius: 10px;
+  background-color: #2c2c3d;
+  overflow: hidden; 
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 0.5rem;
+  font-weight: bold;
+  color: #a0a0b3;
+  text-align: center;
+  border-bottom: 1px solid #e65c5c;
+}
+
+.cell {
+  padding: 0.5rem;
+  text-align: center;
+  /* border-bottom: 1px solid #444; */
+}
+
+.cell:last-child {
+  border-bottom: none; /* Remove border from last cell */
+}
+
+/* Add vertical borders between columns */
+.team-name {
+  border-right: 1px solid #e65c5c;
+}
+
+.progress {
+  border-right: 1px solid #e65c5c;
+}
